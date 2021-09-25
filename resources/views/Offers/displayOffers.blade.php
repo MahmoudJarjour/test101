@@ -119,13 +119,15 @@
                 </div>
 
 
+
+
                 <table class="table table-striped">
                     <thead class="thead-dark">
                     <tr>
                         <th scope="col" >#</th>
-                        <th scope="col">{{__("messages.offer Name")}}</th>
-                        <th scope="col">{{__("messages.offer Price")}}</th>
-                        <th scope="col">{{__("messages.offer Details")}}</th>
+                        <th scope="col"> {{__("messages.offer Name")}} </th>
+                        <th scope="col"> {{__("messages.offer Price")}} </th>
+                        <th scope="col"> {{__("messages.offer Details")}} </th>
                     </tr>
                     </thead>
                     <tbody>

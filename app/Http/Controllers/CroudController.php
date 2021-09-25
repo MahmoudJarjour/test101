@@ -6,14 +6,16 @@ use App\Http\Requests\OfferRequest;
 use App\Models\Offer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use LaravelLocalization;
+
 
 
 class CroudController extends Controller
 {
 
-    public function getvalues(){
-        return Offer::select('name','price','id')->get();
-    }
+   /* public function getvalues(){
+        return Offer::select('name_ar','name_en','price','id')->get();
+    }*/
 
 
 
@@ -31,9 +33,12 @@ class CroudController extends Controller
         }*/
         //insert to database
         Offer::create([
-            'name'=>$request->name,
+            'name_ar'=>$request->name_ar,
+            'name_en'=>$request->name_en,
             'price' => $request->price,
-            'details' => $request->details,
+            'details_ar' => $request->details_ar,
+            'details_en' => $request->details_en,
+
         ]);
         return redirect()->back()->with(["success"=>__('messages.added Successfully')]);
     }
@@ -60,7 +65,11 @@ class CroudController extends Controller
 
     public function getAllOffers(){
 
-        $offers = Offer::select('id','name','price','details')->get();  //return Collection
+        $offers = Offer::select('id',
+            'name_'. LaravelLocalization::getCurrentLocale(). ' as name',
+            'details_'. LaravelLocalization::getCurrentLocale(). ' as details'
+            ,'price')
+            ->get();  //return Collection
 
         return view('Offers.displayOffers',compact('offers'));
 
