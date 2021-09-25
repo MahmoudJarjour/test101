@@ -37,6 +37,11 @@ return [
     'Add Offer' => 'إضاقة عرض',
     'Search' => 'بحث',
     'Display Offer' => 'إظهار العروض',
+    'operations' => "الإجراءات",
+    'Edit' => 'تعديل',
+    'Update Offer' => 'تعديل تفاصيل العرض',
+    'updated Successfully' => 'تم التغديل بنجاح',
+
 
 
 

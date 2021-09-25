@@ -112,18 +112,18 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    {{__("messages.add your offer")}}
+                    {{__("messages.Update Offer")}}
                 </div>
 
                 @if(Session::has('success'))
                 <div class="alert alert-success" role="alert"> {{Session::get('success')}}</div>
                 @endif
 
-                <form method="POST" action="{{route("offers.store")}}">
+                <form method="POST" action="{{route('offers.update',$offer->id)}}">
                     @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">{{__("messages.offer Name Arabic")}}</label>
-                        <input type="text" class="form-control" name="name_ar" placeholder="{{__("messages.offer Name Arabic")}}">
+                        <input type="text" class="form-control" name="name_ar" value="{{$offer->name_ar}}" placeholder="{{__("messages.offer Name Arabic")}}">
                         @error('name_ar')
                         <small class="text-danger">{{$message}}</small>
                         @enderror
@@ -131,7 +131,7 @@
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">{{__("messages.offer Name English")}}</label>
-                        <input type="text" class="form-control" name="name_en" placeholder="{{__("messages.offer Name English")}}">
+                        <input type="text" class="form-control" name="name_en" value="{{$offer->name_en}}"  placeholder="{{__("messages.offer Name English")}}">
                         @error('name_en')
                         <small class="text-danger">{{$message}}</small>
                         @enderror
@@ -139,7 +139,7 @@
 
                     <div class="form-group">
                         <label for="exampleInputPassword1">{{__("messages.offer Price")}}</label>
-                        <input type="text" class="form-control" name="price" placeholder="{{__("messages.offer Price")}}">
+                        <input type="text" class="form-control" name="price" value="{{$offer->price}}" placeholder="{{__("messages.offer Price")}}">
                         @error('price')
                         <small class="text-danger">{{$message}}</small>
                         @enderror
@@ -147,7 +147,7 @@
 
                     <div class="form-group">
                         <label for="exampleInputPassword1">{{__("messages.offer Details Arabic")}}</label>
-                        <input type="text" class="form-control" name="details_ar" placeholder="{{__("messages.offer Details Arabic")}}">
+                        <input type="text" class="form-control" name="details_ar" value="{{$offer->details_ar}}"  placeholder="{{__("messages.offer Details Arabic")}}">
                         @error('details_ar')
                         <small class="text-danger">{{$message}}</small>
                         @enderror
@@ -155,7 +155,7 @@
 
                     <div class="form-group">
                         <label for="exampleInputPassword1">{{__("messages.offer Details English")}}</label>
-                        <input type="text" class="form-control" name="details_en" placeholder="{{__("messages.offer Details English")}}">
+                        <input type="text" class="form-control" name="details_en" value="{{$offer->details_en}}"  placeholder="{{__("messages.offer Details English")}}">
                         @error('details_en')
                         <small class="text-danger">{{$message}}</small>
                         @enderror

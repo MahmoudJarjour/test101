@@ -30,12 +30,16 @@ return [
     'offer Details Arabic' => 'Offer Details In Arabic',
     'offer Details English' => 'Offer Details In English',
     'submit' =>'Submit',
+    'operations' => "Operations",
     'you are logged in' => 'You Are Logged IN',
     'Laravel' =>'LARAVEL',
     'added Successfully' => 'Added Successfully',
     'Add Offer' => 'Add Offer',
     'Search' => 'Search',
     'Display Offer'=>'Display Offer',
+    'Edit' => 'Edit',
+    'Update Offer' => 'Update Offer',
+    'updated Successfully' => 'updated Successfully',
 
 
 

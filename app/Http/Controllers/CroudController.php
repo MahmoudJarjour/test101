@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\OfferRequest;
+use App\Http\Requests\OfferUpdateRequest;
 use App\Models\Offer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -75,4 +76,39 @@ class CroudController extends Controller
 
     }
 
+    public function editOffer($offer_id){
+
+        $found = Offer::find($offer_id);
+        if(!$found)
+        return redirect()->back();
+        $offer = Offer::select('id','name_ar','name_en','price','details_ar','details_en')->find($offer_id);
+        return view('Offers.UpdateForm',compact("offer")) ;
+    }
+
+
+    public function updateOffer(OfferUpdateRequest $request, $offer_id){
+
+        //validation (OfferRequest)
+        // Check if the offer is still exist
+
+        $offer = Offer::find($offer_id);
+        if(!$offer)
+            return redirect()->back();
+
+        // // update offer
+        // first way to update Manually
+        /*Offer::update([
+           'name_ar'=>$request->name_ar,
+           'name_en'=>$request->name_en,
+           'price'=>$request->price,
+           'details_ar'=>$request->details_ar,
+           'details_en'=>$request->details_en,
+        ]);*/
+
+        $offer ->update($request ->all());
+
+        return redirect()->back()->with(['success' => __('messages.updated Successfully')]);
+
+
+    }
 }
