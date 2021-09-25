@@ -32,6 +32,11 @@ Route::get('fillable','CroudController@getvalues');
 
         Route::get('create', 'CroudController@create')->name('create');
         Route::post('store', 'CroudController@store')->name("offers.store");
+
+
+        Route::get('all', 'CroudController@getAllOffers');
     });
+
+
 
 });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OfferRequest;
 use App\Models\Offer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -20,14 +21,14 @@ class CroudController extends Controller
         return view('Offers.createForm');
     }
 
-    public function store(Request $request){
+    public function store(OfferRequest $request){
         //validation
-         $rules = $this->getrules();
+/*         $rules = $this->getrules();
          $Messeges = $this->getMasseges();
         $validator = Validator::make($request->all(),$rules,$Messeges);
         if($validator->fails()){
-            return redirect()->to('offers\create')->withErrors($validator)->withInput($request->all())->with($Messeges);
-        }
+           return redirect()->to('offers\create')->withErrors($validator)->withInput($request->all())->with($Messeges);
+        }*/
         //insert to database
         Offer::create([
             'name'=>$request->name,
@@ -37,7 +38,7 @@ class CroudController extends Controller
         return redirect()->back()->with(["success"=>__('messages.added Successfully')]);
     }
 
-    protected function getrules(){
+/*    protected function getrules(){
         return $rules = [
             'name'=>'required|max:100|unique:offers,name',
             'price'=>'required|numeric',
@@ -54,7 +55,15 @@ class CroudController extends Controller
             'price.numeric'=>__('messages.Price numeric'),
             'details.required'=>__('messages.offer details required'),
         ];
-    }
+    }*/
 
+
+    public function getAllOffers(){
+
+        $offers = Offer::select('id','name','price','details')->get();  //return Collection
+
+        return view('Offers.displayOffers',compact('offers'));
+
+    }
 
 }

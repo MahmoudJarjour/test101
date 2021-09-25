@@ -94,6 +94,8 @@
             </form>
         </div>
     </nav>
+
+
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
@@ -110,45 +112,34 @@
                 </div>
             @endif
 
-            <div class="content">
+
+            <div class="content full-height">
                 <div class="title m-b-md">
-                    {{__("messages.add your offer")}}
+                    {{__("messages.Display Offer")}}
                 </div>
 
-                @if(Session::has('success'))
-                <div class="alert alert-success" role="alert"> {{Session::get('success')}}</div>
-                @endif
 
-                <form method="POST" action="{{route("offers.store")}}">
-                    @csrf
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">{{__("messages.offer Name")}}</label>
-                        <input type="text" class="form-control" name="name" placeholder="{{__("messages.offer Name")}}">
-                        @error('name')
-                        <small class="text-danger">{{$message}}</small>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">{{__("messages.offer Price")}}</label>
-                        <input type="text" class="form-control" name="price" placeholder="{{__("messages.offer Price")}}">
-                        @error('price')
-                        <small class="text-danger">{{$message}}</small>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">{{__("messages.offer Details")}}</label>
-                        <input type="text" class="form-control" name="details" placeholder="{{__("messages.offer Details")}}">
-                        @error('details')
-                        <small class="text-danger">{{$message}}</small>
-                        @enderror
-
-                    </div>
-                    <button type="submit" class="btn btn-primary">{{__("messages.submit")}}</button>
-                </form>
-
-
-
-            </div>
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" >#</th>
+                        <th scope="col">{{__("messages.offer Name")}}</th>
+                        <th scope="col">{{__("messages.offer Price")}}</th>
+                        <th scope="col">{{__("messages.offer Details")}}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($offers as $offer)
+                    <tr>
+                        <th scope="row">{{$offer -> id}}</th>
+                        <td>{{$offer -> name}}</td>
+                        <td>{{$offer -> price}}</td>
+                        <td>{{$offer -> details}}</td>
+                    </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+        </div>
         </div>
     </body>
 </html>

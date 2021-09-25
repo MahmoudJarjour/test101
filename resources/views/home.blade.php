@@ -16,11 +16,20 @@
                     </li>
                 @endforeach
 
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{URL('offers\create')}}">{{__('messages.Add Offer')}}<span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{URL('offers\all')}}">{{__('messages.Display Offer')}}<span class="sr-only">(current)</span></a>
+                    </li>
+
+
 
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" placeholder="{{__('messages.Search')}}" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">{{__('messages.Search')}}</button>
             </form>
         </div>
     </nav>

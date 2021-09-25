@@ -29,6 +29,10 @@ return [
     'you are logged in' => 'You Are Logged IN',
     'Laravel' =>'LARAVEL',
     'added Successfully' => 'Added Successfully',
+    'Add Offer' => 'Add Offer',
+    'Search' => 'Search',
+    'Display Offer'=>'Display Offer',
+
 
 
 

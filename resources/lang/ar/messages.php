@@ -30,6 +30,9 @@ return [
     'you are logged in' => 'تم تسجيل الدخول',
     'Laravel' =>'لارافل',
     'added Successfully' => 'تمت الإضافة بنجاح',
+    'Add Offer' => 'إضاقة عرض',
+    'Search' => 'بحث',
+    'Display Offer' => 'إظهار العروض',
 
 
 
