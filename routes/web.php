@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix' =>LaravelLocalization::setLocale() ,
+    'middleware' =>  'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ],function() {
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,3 +22,16 @@ Auth::routes(['verify'=>true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
+
+Route::get('fillable','CroudController@getvalues');
+
+
+
+    Route::group(['prefix' => 'offers'], function () {
+        // Route::get('store','CroudController@store'); // store data Manually (controller data as associative array)
+
+        Route::get('create', 'CroudController@create')->name('create');
+        Route::post('store', 'CroudController@store')->name("offers.store");
+    });
+
+});

@@ -2,23 +2,26 @@
 
 namespace App\Console\Commands;
 
+use App\Mail\emailNotification;
+use App\User;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Mail;
 
-class notify extends Command
+class Notify extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'notify:email';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'send emails to all users ';
 
     /**
      * Create a new command instance.
@@ -37,6 +40,14 @@ class notify extends Command
      */
     public function handle()
     {
-        //
+       //  $users = User::select('email')->get();
+        $emails = User::pluck('email')->toArray();
+        $data = ['Title'=>'programming', 'body'=>'php'];
+
+        foreach ($emails as $email){
+
+            Mail::to($email)->send(new EmailNotification($data));
+
+        }
     }
 }
