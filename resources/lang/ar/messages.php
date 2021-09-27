@@ -41,7 +41,7 @@ return [
     'Edit' => 'تعديل',
     'Update Offer' => 'تعديل تفاصيل العرض',
     'updated Successfully' => 'تم التغديل بنجاح',
-
+    'Insert Photo' => 'إضافة صورة',
 
 
 

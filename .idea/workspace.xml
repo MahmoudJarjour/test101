@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7e6c45-0fc6-4fa9-ab26-f473dae5688b" name="Default Changelist" comment="make validation for offer request&#10;&#10;use Mcamara for languages (Arabic and English)">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/OfferUpdateRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Offers/UpdateForm.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CroudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CroudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/OfferRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/OfferRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Offer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Offers/createForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Offers/createForm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Offers/displayOffers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Offers/displayOffers.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +190,8 @@
       <workItem from="1632531032211" duration="4188000" />
       <workItem from="1632575093909" duration="1192000" />
       <workItem from="1632579073108" duration="2700000" />
-      <workItem from="1632583296730" duration="11327000" />
+      <workItem from="1632583296730" duration="12768000" />
+      <workItem from="1632615410050" duration="1758000" />
     </task>
     <task id="LOCAL-00001" summary="make command (Expiration) to expire user after 1 minute">
       <created>1632015919460</created>

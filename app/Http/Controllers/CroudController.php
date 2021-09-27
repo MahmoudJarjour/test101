@@ -33,7 +33,17 @@ class CroudController extends Controller
            return redirect()->to('offers\create')->withErrors($validator)->withInput($request->all())->with($Messeges);
         }*/
         //insert to database
+
+        $file_extension = $request -> photo ->getClientOriginalExtension();
+        $file_name= time().'.'.$file_extension;
+        $path = 'Images/Offers';
+
+        $request->photo->move($path,$file_name);
+
+
+
         Offer::create([
+            'photo' => $file_name,
             'name_ar'=>$request->name_ar,
             'name_en'=>$request->name_en,
             'price' => $request->price,

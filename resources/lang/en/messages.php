@@ -40,6 +40,7 @@ return [
     'Edit' => 'Edit',
     'Update Offer' => 'Update Offer',
     'updated Successfully' => 'updated Successfully',
+    'Insert Photo' => 'Insert Photo',
 
 
 

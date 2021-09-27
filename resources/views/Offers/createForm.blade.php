@@ -119,8 +119,18 @@
                 <div class="alert alert-success" role="alert"> {{Session::get('success')}}</div>
                 @endif
 
-                <form method="POST" action="{{route("offers.store")}}">
+                <form method="POST" action="{{route("offers.store")}}" enctype="multipart/form-data">
                     @csrf
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">{{__("messages.Insert Photo")}}</label>
+                        <input type="file" class="form-control" name="photo">
+                        @error('photo')
+                        <small class="text-danger">{{$message}}</small>
+                        @enderror
+                    </div>
+
+
                     <div class="form-group">
                         <label for="exampleInputEmail1">{{__("messages.offer Name Arabic")}}</label>
                         <input type="text" class="form-control" name="name_ar" placeholder="{{__("messages.offer Name Arabic")}}">
