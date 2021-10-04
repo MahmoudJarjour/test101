@@ -20,18 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c7e6c45-0fc6-4fa9-ab26-f473dae5688b" name="Default Changelist" comment="add button to Display Offers &#10;make deleteOffer Function in CrudController that delete offer by (id)">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test101.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test101.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CroudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CroudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventListenerVideo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventListenerVideo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Offers/displayOffers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Offers/displayOffers.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/video.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/video.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1632624310.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1632701171.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1632708534.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1632709734.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1632709944.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1633388505.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1633389185.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1633389205.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1633389450.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1633389462.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1633389489.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1633389503.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1633389651.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1633389662.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/Offers/1633389690.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +230,7 @@
       <workItem from="1633383665031" duration="2709000" />
       <workItem from="1633387128884" duration="285000" />
       <workItem from="1633387419792" duration="2917000" />
-      <workItem from="1633390442105" duration="201000" />
+      <workItem from="1633390442105" duration="858000" />
     </task>
     <task id="LOCAL-00001" summary="make command (Expiration) to expire user after 1 minute">
       <created>1632015919460</created>

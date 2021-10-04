@@ -11,7 +11,6 @@
 |
 */
 
-use Illuminate\Routing\Route;
 
 Route::get('/mood',function(){
     return view('master');
