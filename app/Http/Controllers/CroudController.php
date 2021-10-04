@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\OfferRequest;
 use App\Http\Requests\OfferUpdateRequest;
 use App\Models\Offer;
+use App\Traits\TraitOffer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use LaravelLocalization;
@@ -17,7 +18,7 @@ class CroudController extends Controller
    /* public function getvalues(){
         return Offer::select('name_ar','name_en','price','id')->get();
     }*/
-
+    use TraitOffer;
 
 
     public function create(){
@@ -34,11 +35,9 @@ class CroudController extends Controller
         }*/
         //insert to database
 
-        $file_extension = $request -> photo ->getClientOriginalExtension();
-        $file_name= time().'.'.$file_extension;
-        $path = 'Images/Offers';
+        $file_name = $this -> saveImages($request->photo,'Images/Offers');
 
-        $request->photo->move($path,$file_name);
+
 
 
 
@@ -53,6 +52,8 @@ class CroudController extends Controller
         ]);
         return redirect()->back()->with(["success"=>__('messages.added Successfully')]);
     }
+
+
 
 /*    protected function getrules(){
         return $rules = [
@@ -77,6 +78,7 @@ class CroudController extends Controller
     public function getAllOffers(){
 
         $offers = Offer::select('id',
+            'photo',
             'name_'. LaravelLocalization::getCurrentLocale(). ' as name',
             'details_'. LaravelLocalization::getCurrentLocale(). ' as details'
             ,'price')
@@ -85,6 +87,7 @@ class CroudController extends Controller
         return view('Offers.displayOffers',compact('offers'));
 
     }
+
 
     public function editOffer($offer_id){
 

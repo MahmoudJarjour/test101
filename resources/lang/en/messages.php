@@ -41,6 +41,7 @@ return [
     'Update Offer' => 'Update Offer',
     'updated Successfully' => 'updated Successfully',
     'Insert Photo' => 'Insert Photo',
+    'offer photo'=>'offer photo',
 
 
 
