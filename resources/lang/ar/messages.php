@@ -43,6 +43,9 @@ return [
     'updated Successfully' => 'تم التغديل بنجاح',
     'Insert Photo' => 'إضافة صورة',
     'offer photo'=>'صورة العرض',
+    'delete' => 'حذف' ,
+    'OfferNotFound' => 'العرض غير موجود' ,
+    'OfferDeletedSuccessfully' => 'تم حذف العرض بنجاح' ,
 
 
 

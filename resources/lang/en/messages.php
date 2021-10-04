@@ -42,6 +42,9 @@ return [
     'updated Successfully' => 'updated Successfully',
     'Insert Photo' => 'Insert Photo',
     'offer photo'=>'offer photo',
+    'delete' => 'delete' ,
+    'OfferNotFound' => 'Offer Not Found',
+    'OfferDeletedSuccessfully' => 'offer Deleted Successfully',
 
 
 

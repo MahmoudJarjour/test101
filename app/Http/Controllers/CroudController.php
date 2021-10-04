@@ -9,6 +9,7 @@ use App\Traits\TraitOffer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use LaravelLocalization;
+use thiagoalessio\TesseractOCR\TesseractOCR;
 
 
 
@@ -35,7 +36,7 @@ class CroudController extends Controller
         }*/
         //insert to database
 
-        $file_name = $this -> saveImages($request->photo,'Images/Offers');
+        $file_name = $this -> saveImages($request->photo,'Images/Offers');  // First parameter is the photo name , second parameter is the place of photo (folder)
 
 
 
@@ -89,6 +90,8 @@ class CroudController extends Controller
     }
 
 
+
+
     public function editOffer($offer_id){
 
         $found = Offer::find($offer_id);
@@ -123,5 +126,16 @@ class CroudController extends Controller
         return redirect()->back()->with(['success' => __('messages.updated Successfully')]);
 
 
+    }
+
+    public function deleteOffer($offer_id){
+        //check if the offer is exist
+        $offer = Offer::find($offer_id);
+        if (!$offer)
+            return redirect() -> back() -> with(['error'=> __('messages.OfferNotFound')]);
+        else {
+            $offer->delete();
+            return redirect()->back()->with(['success' => __('messages.OfferDeletedSuccessfully')]);
+        }
     }
 }

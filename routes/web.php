@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/mood',function(){
+    return view('master');
+
+});
 Route::group(['prefix' =>LaravelLocalization::setLocale() ,
     'middleware' =>  'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ],function() {
 
@@ -21,6 +25,8 @@ Route::get('/', function () {
 Auth::routes(['verify'=>true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+
+
 
 
 Route::get('fillable','CroudController@getvalues');
@@ -36,10 +42,15 @@ Route::get('fillable','CroudController@getvalues');
 
         Route::get('Edit/{id}', 'CroudController@editOffer');
         Route::post('Update/{id}', 'CroudController@updateOffer')->name("offers.update");
+        Route::get('delete/{id}', 'CroudController@deleteOffer')->name("offers.delete");
 
 
 
         Route::get('all', 'CroudController@getAllOffers');
+
+        Route::get('youtube','EventListenerVideo@getVideo');
+
+
     });
 
 
